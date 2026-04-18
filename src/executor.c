@@ -16,3 +16,8 @@ void execute_command(char **args) {
         }
     }
 }
+
+if (pid == 0) {
+    handle_redirection(args);   
+    execvp(args[0], args);
+}

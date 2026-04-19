@@ -1,0 +1,10 @@
+# Ignore the compiled executable
+myshell
+
+# Ignore all object files
+src/*.o
+*.o
+
+# Ignore temporary text files or logs
+*.txt
+*.log

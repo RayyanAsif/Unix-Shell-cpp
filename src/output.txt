@@ -1,7 +1,0 @@
-advanced.c
-builtin.c
-executor.c
-main.c
-output.txt
-parser.c
-shell.h

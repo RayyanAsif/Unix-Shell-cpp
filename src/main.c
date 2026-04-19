@@ -6,10 +6,14 @@ int main() {
 
     while (1) {
         printf("myShell> ");
-        fgets(input, sizeof(input), stdin);
+        if (!fgets(input, sizeof(input), stdin)) break;
 
         input[strcspn(input, "\n")] = 0;
 
+        // Ignore empty input
+        if (strlen(input) == 0) continue;
+
+        // Check for pipes first
         if (strchr(input, '|')) {
             handle_pipes(input);
             continue;
